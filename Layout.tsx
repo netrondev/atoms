@@ -11,6 +11,7 @@ export function Layout(props: {
   description: string;
   children: ReactNode;
   public?: boolean;
+  top_right?: ReactNode;
 }) {
   const session = useSession();
   if (session.status === "loading") return <LoadingLarge />;
@@ -25,8 +26,9 @@ export function Layout(props: {
       </Head>
       <main className="min-h-screen w-full overflow-x-hidden bg-white p-2 dark:bg-neutral-800">
         <div className="container mx-auto p-2">
-          <div>
+          <div className="flex w-full">
             <TopNav appname={props.appname} />
+            {props.top_right}
           </div>
           <div
             className={cn(

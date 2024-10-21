@@ -8,7 +8,7 @@ import { cn } from "./cn";
 export function TopNav(props: { appname?: string }) {
   const session = useSession();
   return (
-    <nav className="">
+    <nav className="w-full">
       <div className="container mx-auto flex gap-5 p-2">
         <Button
           href="/"
@@ -21,29 +21,6 @@ export function TopNav(props: { appname?: string }) {
         </Button>
 
         <div className="flex-1" />
-
-        {session.status === "unauthenticated" && (
-          <Button
-            onClick={async () => {
-              await signIn();
-            }}
-          >
-            Sign In
-          </Button>
-        )}
-        {session.status === "authenticated" && (
-          <>
-            <User user={session.data.user} />
-
-            <Button
-              onClick={async () => {
-                await signOut();
-              }}
-            >
-              Signout
-            </Button>
-          </>
-        )}
       </div>
     </nav>
   );
