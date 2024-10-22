@@ -20,7 +20,10 @@ export function Label(
   if (props.align === "left") {
     return (
       <div className={cn("flex flex-row items-center gap-2", props.className)}>
-        <label {...rest} className={cn("text-sm text-neutral-600")}>
+        <label
+          {...rest}
+          className={cn("text-sm text-neutral-600 dark:text-neutral-300")}
+        >
           {title}
         </label>
         <div className={props.className}>{children}</div>
@@ -32,7 +35,10 @@ export function Label(
     return (
       <div className={cn("flex flex-row items-center gap-2", props.className)}>
         <div className={props.className}>{children}</div>
-        <label {...rest} className={cn("text-sm text-neutral-600")}>
+        <label
+          {...rest}
+          className={cn("text-sm text-neutral-600 dark:text-neutral-300")}
+        >
           {title}
         </label>
       </div>

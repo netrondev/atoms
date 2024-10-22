@@ -45,7 +45,7 @@ export function Heading(props: {
         <h3
           id={props.id}
           className={cn(
-            "text w-full font-semibold text-neutral-500",
+            "text w-full font-semibold text-neutral-500 dark:text-emerald-500",
             props.className,
           )}
         >
@@ -59,7 +59,7 @@ export function Heading(props: {
         <h2
           id={props.id}
           className={cn(
-            "w-full text-2xl font-semibold text-neutral-900",
+            "w-full text-2xl font-semibold text-neutral-900 dark:text-white",
             props.className,
           )}
         >
@@ -87,4 +87,12 @@ export function Heading(props: {
 
 export function H1(props: ComponentProps<typeof Heading>) {
   return <Heading variant="h1" {...props} />;
+}
+
+export function H2(props: ComponentProps<typeof Heading>) {
+  return <Heading variant="h2" {...props} />;
+}
+
+export function H3(props: ComponentProps<typeof Heading>) {
+  return <Heading variant="h3" {...props} />;
 }

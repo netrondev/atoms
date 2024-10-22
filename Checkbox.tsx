@@ -56,8 +56,9 @@ export function Checkbox(
         className={cn(
           "flex aspect-square h-5 w-5 cursor-pointer items-center justify-center rounded",
           "select-none bg-neutral-100 text-white",
-          state && "bg-sky-500 hover:bg-sky-500",
-          state === false && "text-neutral-300 hover:text-neutral-400",
+          state && "bg-emerald-500 hover:bg-emerald-500",
+          state === false &&
+            "text-neutral-300 hover:text-neutral-400 dark:bg-neutral-500/20 dark:text-emerald-500",
           state === null && "bg-neutral-300 hover:bg-neutral-400",
           props.className,
         )}

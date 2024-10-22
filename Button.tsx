@@ -83,7 +83,7 @@ export function Button(
 
     variant === "contained" &&
       cn(
-        "bg-neutral-950 text-white hover:bg-neutral-700 hover:text-neutral-100 dark:bg-emerald-500/10",
+        "bg-neutral-950 text-white hover:bg-neutral-700 hover:text-neutral-100 dark:bg-emerald-700",
         active &&
           cn(
             "hover:bg-neutral-600/70 bg-neutral-500 text-white hover:text-white",
@@ -125,6 +125,7 @@ export function Button(
       "flex items-center self-stretch rounded border border-neutral-300  bg-white p-2 text-neutral-400 accent-primary-500 focus:border-green-400 focus:outline-none",
 
     className,
+    disabled && "cursor-not-allowed opacity-20",
   );
 
   function render_button() {

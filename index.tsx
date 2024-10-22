@@ -22,3 +22,4 @@ export * from "./Seperator";
 export * from "./Table";
 export * from "./TextArea";
 export * from "./Version";
+export * from "./Paragraph";
