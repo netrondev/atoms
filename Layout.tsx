@@ -24,9 +24,9 @@ export function Layout(props: {
         <meta name="description" content={props.description} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="min-h-screen w-full overflow-x-hidden bg-white p-2 dark:bg-neutral-800">
-        <div className="container mx-auto p-2">
-          <div className="flex w-full">
+      <main className="min-h-screen w-full overflow-x-hidden bg-white dark:bg-neutral-800">
+        <div className="container mx-auto">
+          <div className="flex w-full items-center pl-2 pr-5">
             <TopNav appname={props.appname} />
             {props.top_right}
           </div>

@@ -15,7 +15,7 @@ export function TopNav(props: { appname?: string }) {
           className="group gap-1 font-semibold tracking-tighter text-neutral-700 transition-all duration-1000 dark:text-cyan-300"
         >
           <Logo className="size-5" />
-          <span className="text-sm tracking-widest transition-all duration-1000 group-hover:tracking-widest dark:text-neutral-200 group-hover:dark:text-white">
+          <span className="hidden text-sm tracking-widest transition-all duration-1000 group-hover:tracking-widest sm:block dark:text-neutral-200 group-hover:dark:text-white">
             {props.appname ?? "APP NAME"}
           </span>
         </Button>
